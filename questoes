@@ -3,200 +3,185 @@
   Objetivo:
   Praticar os conceitos básicos da linguagem C, utilizando estruturas de decisão if, else e switch.
 
-Enunciado:
-
-A seguir estão descritos 6 algoritmos. Sua tarefa é converter o algoritmo escolhido para linguagem C.
+  Enunciado:
+  A seguir estão descritos 6 algoritmos. Sua tarefa é converter o algoritmo escolhido para linguagem C.
 
   ⚠️ Atenção:
 
-    *A implementação deve ser feita somente em C.
-
-    *Você deve escolher apenas 3 exercícios entre os listados abaixo.
-
-    *Teste seu programa com diferentes valores de entrada.
-
-    *Comente o código explicando o que cada parte faz.
+      *A implementação deve ser feita somente em C.
+      *Você deve escolher apenas 3 exercícios entre os listados abaixo.
+      *Teste seu programa com diferentes valores de entrada.
+      *Comente o código explicando o que cada parte faz.
 
 Exercícios Disponíveis
 
   1 - Par ou Ímpar 
      Leia um número inteiro e informe se ele é par ou ímpar.
 
-Algoritmo ParOuImpar
-  inteiro NUM
-  escreva("Digite um número inteiro: ")
-  leia(NUM)
-
-  se NUM % 2 = 0 então
-     escreva("O número é par")
-  senão
-     escreva("O número é ímpar")
-  fimse
-FimAlgoritmo
+        Algoritmo ParOuImpar
+          inteiro NUM
+          escreva("Digite um número inteiro: ")
+          leia(NUM)
+        
+          se NUM % 2 = 0 então
+             escreva("O número é par")
+          senão
+             escreva("O número é ímpar")
+          fimse
+        FimAlgoritmo
 
  
   2 - Maior de Dois Números 
     Leia dois números inteiros e informe qual deles é o maior.
 
-Algoritmo MaiorDeDois
-  inteiro A, B
-  escreva("Digite o primeiro número: ")
-  leia(A)
-  escreva("Digite o segundo número: ")
-  leia(B)
-
-  se A > B então
-     escreva("O maior número é: ", A)
-  senão
-     escreva("O maior número é: ", B)
-  fimse
-FimAlgoritmo
-
+          Algoritmo MaiorDeDois
+            inteiro A, B
+            escreva("Digite o primeiro número: ")
+            leia(A)
+            escreva("Digite o segundo número: ")
+            leia(B)
+          
+            se A > B então
+               escreva("O maior número é: ", A)
+            senão
+               escreva("O maior número é: ", B)
+            fimse
+          FimAlgoritmo
 
 
   3 - Situação do Aluno 
     Leia a nota de um aluno (0 a 10) e informe sua situação:
+       *Nota maior ou igual a 7 → Aprovado
+       *Nota entre 5 e 6.9 → Recuperação
+       *Nota menor que 5 → Reprovado
 
-   *Nota maior ou igual a 7 → Aprovado
-
-   *Nota entre 5 e 6.9 → Recuperação
-
-   *Nota menor que 5 → Reprovado
-
-Algoritmo SituacaoAluno
-  real NOTA
-  escreva("Digite a nota do aluno: ")
-  leia(NOTA)
-
-  se NOTA >= 7 então
-     escreva("Aprovado")
-  senão
-     se NOTA >= 5 então
-        escreva("Recuperação")
-     senão
-        escreva("Reprovado")
-     fimse
-  fimse
-FimAlgoritmo
+              Algoritmo SituacaoAluno
+                real NOTA
+                escreva("Digite a nota do aluno: ")
+                leia(NOTA)
+              
+                se NOTA >= 7 então
+                   escreva("Aprovado")
+                senão
+                   se NOTA >= 5 então
+                      escreva("Recuperação")
+                   senão
+                      escreva("Reprovado")
+                   fimse
+                fimse
+              FimAlgoritmo
 
  
   4 - Menu de Operações 
    Crie um menu que permita ao usuário escolher uma operação matemática (soma, subtração, multiplicação ou divisão) entre dois números. Use a estrutura switch para decidir a operação.
-Algoritmo CalculadoraSimples
-  inteiro OP
-  real N1, N2, RES
-
-  escreva("Digite o primeiro número: ")
-  leia(N1)
-  escreva("Digite o segundo número: ")
-  leia(N2)
-
-  escreva("Escolha a operação: ")
-  escreva("1 - Soma")
-  escreva("2 - Subtração")
-  escreva("3 - Multiplicação")
-  escreva("4 - Divisão")
-  leia(OP)
-
-  escolha OP
-    caso 1:
-       RES <- N1 + N2
-       escreva("Resultado: ", RES)
-    caso 2:
-       RES <- N1 - N2
-       escreva("Resultado: ", RES)
-    caso 3:
-       RES <- N1 * N2
-       escreva("Resultado: ", RES)
-    caso 4:
-       se N2 <> 0 então
-          RES <- N1 / N2
-          escreva("Resultado: ", RES)
-       senão
-          escreva("Erro: divisão por zero!")
-       fimse
-  fimescolha
-FimAlgoritmo
+          
+          Algoritmo CalculadoraSimples
+            inteiro OP
+            real N1, N2, RES
+          
+            escreva("Digite o primeiro número: ")
+            leia(N1)
+            escreva("Digite o segundo número: ")
+            leia(N2)
+          
+            escreva("Escolha a operação: ")
+            escreva("1 - Soma")
+            escreva("2 - Subtração")
+            escreva("3 - Multiplicação")
+            escreva("4 - Divisão")
+            leia(OP)
+          
+            escolha OP
+              caso 1:
+                 RES <- N1 + N2
+                 escreva("Resultado: ", RES)
+              caso 2:
+                 RES <- N1 - N2
+                 escreva("Resultado: ", RES)
+              caso 3:
+                 RES <- N1 * N2
+                 escreva("Resultado: ", RES)
+              caso 4:
+                 se N2 <> 0 então
+                    RES <- N1 / N2
+                    escreva("Resultado: ", RES)
+                 senão
+                    escreva("Erro: divisão por zero!")
+                 fimse
+            fimescolha
+          FimAlgoritmo
 
 
   5 - Classificação por Idade 
-     Leia a idade de uma pessoa e informe em qual categoria ela se encaixa:
-
+      Leia a idade de uma pessoa e informe em qual categoria ela se encaixa:
        *Menor de 12 → Criança
+       *Entre 12 e 17 → Adolescente
+       *Entre 18 e 59 → Adulto
+       *60 ou mais → Idoso
 
-      *Entre 12 e 17 → Adolescente
-
-      *Entre 18 e 59 → Adulto
-
-      *60 ou mais → Idoso
-
-Algoritmo ClassificacaoIdade
-  inteiro IDADE
-  escreva("Digite a idade: ")
-  leia(IDADE)
-
-  se IDADE < 12 então
-     escreva("Criança")
-  senão
-     se IDADE < 18 então
-        escreva("Adolescente")
-     senão
-        se IDADE < 60 então
-           escreva("Adulto")
-        senão
-           escreva("Idoso")
-        fimse
-     fimse
-  fimse
-FimAlgoritmo
+            Algoritmo ClassificacaoIdade
+              inteiro IDADE
+              escreva("Digite a idade: ")
+              leia(IDADE)
+            
+              se IDADE < 12 então
+                 escreva("Criança")
+              senão
+                 se IDADE < 18 então
+                    escreva("Adolescente")
+                 senão
+                    se IDADE < 60 então
+                       escreva("Adulto")
+                    senão
+                       escreva("Idoso")
+                    fimse
+                 fimse
+              fimse
+            FimAlgoritmo
 
 
    6 - Média com Conceito 
-      Leia três notas de um aluno, calcule a média e atribua um conceito usando if/else. Depois, use um switch para exibir o conceito em letras:
- 
-       *Média ≥ 9 → A
+      Leia três notas de um aluno, calcule a média e atribua um conceito usando if/else. Depois, use um switch para exibir o conceito em letras: 
+         *Média ≥ 9 → A
+         *Média ≥ 7 → B
+         *Média ≥ 5 → C
+         *Média < 5 → D
 
-       *Média ≥ 7 → B
-
-       *Média ≥ 5 → C
-
-       *Média < 5 → D
-
-  Algoritmo MediaConceito
-  real N1, N2, N3, MEDIA
-  inteiro CONCEITO
-
-  escreva("Digite a primeira nota: ")
-  leia(N1)
-  escreva("Digite a segunda nota: ")
-  leia(N2)
-  escreva("Digite a terceira nota: ")
-  leia(N3)
-
-  MEDIA <- (N1 + N2 + N3) / 3
-
-  se MEDIA >= 9 então
-     CONCEITO <- 1
-  senão
-     se MEDIA >= 7 então
-        CONCEITO <- 2
-     senão
-        se MEDIA >= 5 então
-           CONCEITO <- 3
-        senão
-           CONCEITO <- 4
-        fimse
-     fimse
-  fimse
-
-  escolha CONCEITO
-    caso 1:
-       escreva("Média: ", MEDIA, " - Conceito A")
-    caso 2:
-       escreva("Média: ", MEDIA, " - Conceito B")
-    caso 3:
-       escreva("Média: ", MEDIA, " - Conceito C")
-    caso 4:
-       escreva("Média: ", MEDIA, " - Conceito D")
-  fimescolha
-FimAlgoritmo
+            Algoritmo MediaConceito
+              real N1, N2, N3, MEDIA
+              inteiro CONCEITO
+            
+              escreva("Digite a primeira nota: ")
+              leia(N1)
+              escreva("Digite a segunda nota: ")
+              leia(N2)
+              escreva("Digite a terceira nota: ")
+              leia(N3)
+            
+              MEDIA <- (N1 + N2 + N3) / 3
+            
+              se MEDIA >= 9 então
+                 CONCEITO <- 1
+              senão
+                 se MEDIA >= 7 então
+                    CONCEITO <- 2
+                 senão
+                    se MEDIA >= 5 então
+                       CONCEITO <- 3
+                    senão
+                       CONCEITO <- 4
+                    fimse
+                 fimse
+              fimse
+            
+              escolha CONCEITO
+                caso 1:
+                   escreva("Média: ", MEDIA, " - Conceito A")
+                caso 2:
+                   escreva("Média: ", MEDIA, " - Conceito B")
+                caso 3:
+                   escreva("Média: ", MEDIA, " - Conceito C")
+                caso 4:
+                   escreva("Média: ", MEDIA, " - Conceito D")
+              fimescolha
+            FimAlgoritmo
